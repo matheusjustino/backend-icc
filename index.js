@@ -45,6 +45,6 @@ app.get('/pegaValores', (req, res1) => {
     })
 })
 
-app.listen(PORT, (req, res) => {
+app.listen(process.env.PORT || PORT, (req, res) => {
     console.log("SERVER ON");
 });
