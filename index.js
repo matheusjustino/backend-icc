@@ -5,7 +5,7 @@ const ObjectId = require("mongodb").ObjectID;
 
 const aulas = require('./models/Aula');
 const app = express();
-const PORT = 9000;
+const PORT = 5000;
 const bodyParser = require('body-parser');
 const funcao = require('./Funcoes');
 const cors = require("cors");
@@ -60,7 +60,7 @@ app.get('/pegaValores', (req, res1) => {
 });
 
 
-app.listen(PORT || process.env.PORT, () => {
+app.listen((process.env.PORT || 5000 || 80), '0.0.0.0', () => {
     MongoClient.connect(url, { useNewUrlParser: true }, (error, client) => {
         if (error) {throw error;}
         database = client.db(db_n);
