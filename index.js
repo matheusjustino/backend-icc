@@ -60,7 +60,7 @@ app.get('/pegaValores', (req, res1) => {
 });
 
 
-app.listen((process.env.PORT || 5000 || 80), '0.0.0.0', () => {
+app.listen((process.env.PORT || 9000), () => {
     MongoClient.connect(url, { useNewUrlParser: true }, (error, client) => {
         if (error) {throw error;}
         database = client.db(db_n);

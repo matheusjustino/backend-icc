@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-
+//"mongodb://localhost:27017/dbicc"
+//"mongodb+srv://deploy:dbicc321@cluster0-r58uk.mongodb.net/test?retryWrites=true&w=majority"
 mongoose.connect("mongodb+srv://deploy:dbicc321@cluster0-r58uk.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true }).then(() => {
     console.log("Banco de dados local ON!");
 }).catch(err => console.log(err));
