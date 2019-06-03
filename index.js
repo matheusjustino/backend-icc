@@ -1,13 +1,12 @@
 const express = require('express');
 
 const MongoClient = require("mongodb").MongoClient;
-const ObjectId = require("mongodb").ObjectID;
+//const ObjectId = require("mongodb").ObjectID;
 
-const aulas = require('./models/Aula');
+//const aulas = require('./models/Aula');
 const app = express();
-const PORT = 5000;
 const bodyParser = require('body-parser');
-const funcao = require('./Funcoes');
+//const funcao = require('./Funcoes');
 const cors = require("cors");
 
 const url = "mongodb+srv://deploy:dbicc321@cluster0-r58uk.mongodb.net/test?retryWrites=true&w=majority";
