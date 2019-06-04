@@ -3,10 +3,8 @@ const express = require('express');
 const MongoClient = require("mongodb").MongoClient;
 //const ObjectId = require("mongodb").ObjectID;
 
-//const aulas = require('./models/Aula');
 const app = express();
 const bodyParser = require('body-parser');
-//const funcao = require('./Funcoes');
 const cors = require("cors");
 
 const url = "mongodb+srv://deploy:dbicc321@cluster0-r58uk.mongodb.net/test?retryWrites=true&w=majority";
@@ -20,7 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json(), function (req, res, next) {
 
     res.header("Allow", "OPTIONS, GET, POST");
-    //res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Access-Control-Allow-Origin, X-Requested-With, Content-Type, Accept");
     next();
