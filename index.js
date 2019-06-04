@@ -22,7 +22,7 @@ app.use(express.json(), function (req, res, next) {
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
     res.header("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Access-Control-Allow-Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Headers", "Access-Control-Allow-Origin, X-Requested-With, Content-Type, Accept, Authorization");
     res.setHeader('Access-Control-Allow-Credentials', true)
     next();
 
