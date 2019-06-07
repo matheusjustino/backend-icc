@@ -1,7 +1,6 @@
 const express = require('express');
 
 const MongoClient = require("mongodb").MongoClient;
-//const ObjectId = require("mongodb").ObjectID;
 
 const app = express();
 const bodyParser = require('body-parser');
@@ -44,21 +43,6 @@ app.get('/pegaValores', (req, res) => {
     console.log("Dados recuperados");
     const t = req.query.data;
     console.log(t);
-
-    /*collection.find({ data: t }).toArray().then(itens => {
-        let a = [0, 0, 0, 0];
-        if (itens.length > 0) {
-            for (let i = 0; i < itens.length; i++) {
-                for (let j = 0; j < itens[i].values.length; j++) {
-                    a[j] += itens[i].values[j];
-                }
-            }
-            console.log(a);
-        }
-        res1.send(a);
-    });*/
-
-    
 
     collection.find({ data: t }).toArray().then(itens => {
         const a = solve(itens)
