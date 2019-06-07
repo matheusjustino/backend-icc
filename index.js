@@ -92,17 +92,42 @@ function solve(itens) {
     //console.log(itens);
 
     if (itens.length > 0) {
-
-        for (let k = 1; k <= 5; k++) {
-            for (let i = 0; i < itens.length; i++) {
-                for (let j = 0; j < itens[i].values.length; j++) {
-                    if (itens[i].values[j] === k) {
-                        obj[0][j] += 1;
-                    }
+        for (let i = 0; i < itens.length; i++) {
+            for (let j = 0; j < itens[i].values.length; j++) {
+                if (itens[i].values[j] === 1) {
+                    obj[0][j] += 1;
                 }
             }
         }
-
+        for (let i = 0; i < itens.length; i++) {
+            for (let j = 0; j < itens[i].values.length; j++) {
+                if (itens[i].values[j] === 2) {
+                    obj[1][j] += 1;
+                }
+            }
+        }
+        for (let i = 0; i < itens.length; i++) {
+            for (let j = 0; j < itens[i].values.length; j++) {
+                if (itens[i].values[j] === 3) {
+                    obj[2][j] += 1;
+                }
+            }
+        }
+        for (let i = 0; i < itens.length; i++) {
+            for (let j = 0; j < itens[i].values.length; j++) {
+                if (itens[i].values[j] === 4) {
+                    obj[3][j] += 1;
+                }
+            }
+        }
+        for (let i = 0; i < itens.length; i++) {
+            for (let j = 0; j < itens[i].values.length; j++) {
+                if (itens[i].values[j] === 5) {
+                    obj[4][j] += 1;
+                }
+            }
+        }                                                                                                                                                                                                                                                                                                           
     }
-    return obj;                                                                                                                                                                                                                                                                                                      
+
+    return obj;
 }
