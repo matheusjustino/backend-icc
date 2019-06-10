@@ -45,6 +45,7 @@ app.get('/pegaValores', (req, res) => {
     console.log(t);
 
     collection.find({ data: t }).toArray().then(itens => {
+        console.log(itens)
         const a = solve(itens)
         console.log(a);
         res.send(a);
