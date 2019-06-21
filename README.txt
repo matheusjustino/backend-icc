@@ -1,3 +1,6 @@
+BACKEND AINDA NÃO FINALIZADO!
+
+
 Backend da aplicação para avaliação de aula.
 O backend foi feito em NodeJs e Express. O banco de dados utilizado foi o MongoDB e o deploy feito no Heroku.
 
@@ -7,9 +10,9 @@ Caso ocorra algum problema ao tentar conectar o banco de dados pode ser que o Mo
 
 
 Para guardar os dados do banco de dados digite no terminal dentro do diretório backend:
-mongodump --db dbicc --collection aulas
+´mongodump --db dbicc --collection aulas´
 
 Para recuperar os dados do banco de dados digite no terminal dentro do diretório backend:
-mongorestore --db dbicc dump/dbicc
+´mongorestore --db dbicc dump/dbicc´
 
 
