@@ -29,10 +29,11 @@ app.use(express.json(), function (req, res, next) {
 
 
 app.post('/salvaValores', (req, res) => {
-    console.log(req.body);
     collectionAulas.insert(req.body, (error, result) => {
         if (error) {
             console.log(error);
+        } else {
+            console.log(req.body);
         }
         res.send(result.result);
     });
@@ -68,7 +69,7 @@ app.listen((process.env.PORT || 9000), () => {
         if (error) {throw error;}
         database = client.db(db_n);
         collectionAulas = database.collection('aulas');
-        collectionMatriculas = database.collection('matriculas');
+        //collectionMatriculas = database.collection('matriculas');
         console.log("Conectado ao banco de dados: " + db_n + ".");
     });
     console.log("SERVER ON");
