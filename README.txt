@@ -1,6 +1,3 @@
-BACKEND AINDA NÃO FINALIZADO!
-
-
 Backend da aplicação para avaliação de aula.
 O backend foi feito em NodeJs e Express. O banco de dados utilizado foi o MongoDB e o deploy feito no Heroku.
 
